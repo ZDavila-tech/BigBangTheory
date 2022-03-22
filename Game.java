@@ -15,7 +15,6 @@ public class Game {
         System.out.println("Choose your weapon: ");
         Scanner input= new Scanner(System.in);
         String user_action = input.next();
-        input.close();
         switch(user_action){
             case "Rock":
                 switch(computer_actions){
@@ -125,7 +124,17 @@ public class Game {
             break;
         }
         System.out.println("Would you like to play again? Y/N: ");
+        String play_agn = input.next();
+        switch(play_agn){
+            case "Y":
+                play = true;
+                break;
+            case "N":
+                play = false;
+                break;
+        }
         
+        input.close();
         
     }
     
