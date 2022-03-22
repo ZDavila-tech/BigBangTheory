@@ -7,6 +7,7 @@ public class Game {
     static int random = rand.nextInt(5); //Gives you random number between 0 and 4
     static String[] possible_actions = {"Rock", "Paper", "Scissors", "Lizard", "Spock"};
     static String computer_actions = possible_actions[random];
+    static String user_action;
     static String result;
     static boolean play = true;
 
@@ -14,7 +15,7 @@ public class Game {
         while(play == true){
         System.out.println("Choose your weapon: ");
         Scanner input= new Scanner(System.in);
-        String user_action = input.next();
+        user_action = input.next();
 
         switch(user_action){
             case "Rock":
@@ -151,24 +152,12 @@ public class Game {
         }
         System.out.println("Would you like to play again? Y/N: ");
         String play_agn = input.next();
-       /* switch(play_agn){
-            case "Y":
-                play = true;
-                break;
-            case "N":
-                System.out.println("Final Score: " + score);
-                score = 0;
-                play = false;
-                break;
-        }*/
         if(play_agn.equals("Y")){
             play = true;
         }else{
             System.out.println("Final Score: " + score);
-                score = 0;
                 play = false;
         }
     }   
-       
     }   
 }
