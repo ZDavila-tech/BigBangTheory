@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 import java.awt.*;
 import javax.swing.*;
 
@@ -48,6 +49,11 @@ public class GUI extends Game{
             @Override
             public void actionPerformed(final ActionEvent e){
                 button1 = (JButton)e.getSource();
+                Scanner input= new Scanner(user_weapon.getText());
+                user_action = input.next();
+                Game.play_game();
+                p2.add(button2);
+                p2.add(button3);
             }
         });
         
@@ -71,8 +77,7 @@ public class GUI extends Game{
         p1.add(label1);
         p1.add(user_weapon);
         p1.add(button1);
-        p2.add(button2);
-        p2.add(button3);
+        
 
     }
 
