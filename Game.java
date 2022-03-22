@@ -13,18 +13,7 @@ public class Game {
     static String result;
     static boolean play = true;
 
-    public static void main(String[] args) {
-        /*System.out.println("Would you like to play again? Y/N: ");
-        String play_agn = input.next();
-        if(play_agn.equals("Y")){
-            play = true;
-        }else{
-            System.out.println("Final Score: " + score);
-                play = false;
-        }
-        */
-    }   
-    
+    //Game Function
     static void play_game(){
         switch(user_action){
             case "Rock":
