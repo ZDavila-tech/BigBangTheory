@@ -13,7 +13,10 @@ public class GUI extends Game{
     static JPanel container = new JPanel();
     static JLabel label1;
     static JTextField user_weapon;
-    static Icon icon1, icon2;
+    static String image, image2;
+    static Icon icon1 = new ImageIcon(image);
+    static Icon icon2 = new ImageIcon(image2);
+
     
     public static void main(String args[]){
         createFrame();
@@ -76,27 +79,36 @@ public class GUI extends Game{
     static void chooseImage(){
         switch(Game.user_action){
             case "Rock":
-            
+                image = "";
             break;
             case "Paper":
+            image = "";
             break;
             case "Scissors":
+            image = "";
             break;
             case "Lizard":
+            image = "";
             break;
             case "Spock":
+            image = "";
             break;
         }
         switch(Game.computer_actions){
             case "Rock":
+            image2 = "";
             break;
             case "Paper":
+            image2 = "";
             break;
             case "Scissors":
+            image2 = "";
             break;
             case "Lizard":
+            image2 = "";
             break;
             case "Spock":
+            image2 = "";
             break;
         }
     }
