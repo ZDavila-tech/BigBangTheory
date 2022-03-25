@@ -12,7 +12,7 @@ public class GUI extends Game{
     static JButton button2 = new JButton("Play Again");
     static JButton button3 = new JButton("Quit");
     static JPanel container = new JPanel();
-    static JLabel label1;
+    static JLabel label1, label2, label3, label4;
     static JTextField user_weapon;
     static String image, image2;
     static Icon icon1 = new ImageIcon(image);
@@ -28,7 +28,7 @@ public class GUI extends Game{
     static void createFrame(){
         frame1 = new JFrame("Rock, Paper, Scissors, Lizard, Spock");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame1.setSize(800, 800);
+        frame1.setSize(500, 500);
         frame1.add(container);
         frame1.setVisible(true);
     }
@@ -52,6 +52,12 @@ public class GUI extends Game{
                 Scanner input= new Scanner(user_weapon.getText());
                 user_action = input.next();
                 Game.play_game();
+                label2 = new JLabel(Game.result);
+                label3 = new JLabel(play_score);
+                label4 = new JLabel(comp_score);
+                p2.add(label2);
+                p2.add(label3);
+                p2.add(label4);
                 p2.add(button2);
                 p2.add(button3);
             }
@@ -62,6 +68,13 @@ public class GUI extends Game{
             @Override
             public void actionPerformed(final ActionEvent e){
                 button2 = (JButton)e.getSource();
+                user_weapon.setText("");
+                p2.remove(label2);
+                p2.remove(label3);
+                p2.remove(label4);
+                p2.remove(button2);
+                p2.remove(button3);
+            
             }
         });
 
