@@ -1,2 +1,1 @@
-# FullSailProject
-Full Sail Project for Scholarship
+# Rock, Paper, Scissors... LIZARD, SPOCK!!
